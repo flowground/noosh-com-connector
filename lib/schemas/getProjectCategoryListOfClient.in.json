@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "workgroup_id": {
+            "required": true,
+            "type": "string"
+        },
+        "client_workgroup_id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

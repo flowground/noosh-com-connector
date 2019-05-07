@@ -1,0 +1,82 @@
+{
+    "type": "object",
+    "properties": {
+        "workgroup_id": {
+            "required": true,
+            "type": "string"
+        },
+        "project_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Java type: com.noosh.domain.nooshapi.persist.vo.SpecPersistVO",
+            "properties": {
+                "jsonBody": {
+                    "description": "",
+                    "example": "false",
+                    "type": "boolean"
+                },
+                "product_type_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "quantity_1": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "quantity_2": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "quantity_3": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "quantity_4": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "quantity_5": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "sku": {
+                    "description": "",
+                    "example": "sample sku",
+                    "type": "string"
+                },
+                "spec_name": {
+                    "description": "",
+                    "example": "sample spec_name",
+                    "type": "string"
+                },
+                "spec_template_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "spec_type_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

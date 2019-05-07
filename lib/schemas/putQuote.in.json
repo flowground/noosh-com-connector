@@ -1,0 +1,44 @@
+{
+    "type": "object",
+    "properties": {
+        "workgroup_id": {
+            "required": true,
+            "type": "string"
+        },
+        "project_id": {
+            "required": true,
+            "type": "string"
+        },
+        "quote_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Java type: com.noosh.domain.nooshapi.persist.vo.QuotePutPersistVO",
+            "properties": {
+                "action": {
+                    "description": "",
+                    "example": "sample action",
+                    "type": "string"
+                },
+                "po_number": {
+                    "description": "",
+                    "example": "sample po_number",
+                    "type": "string"
+                },
+                "quote_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "state_change_comments": {
+                    "description": "",
+                    "example": "sample state_change_comments",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

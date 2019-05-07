@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "properties": {
+        "workgroup_name": {
+            "required": false,
+            "type": "string"
+        },
+        "workgroup_types": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}

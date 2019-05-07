@@ -1,0 +1,125 @@
+{
+    "type": "object",
+    "properties": {
+        "workgroup_id": {
+            "required": true,
+            "type": "string"
+        },
+        "project_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Java type: com.noosh.domain.nooshapi.persist.vo.TaskPersistVO",
+            "properties": {
+                "actual_duration": {
+                    "description": "",
+                    "example": "1.1",
+                    "format": "double",
+                    "type": "number"
+                },
+                "actual_duration_hour": {
+                    "description": "",
+                    "example": "1.1",
+                    "format": "double",
+                    "type": "number"
+                },
+                "actual_end_date": {
+                    "description": "",
+                    "format": "date",
+                    "type": "string"
+                },
+                "actual_start_date": {
+                    "description": "",
+                    "format": "date",
+                    "type": "string"
+                },
+                "assign_to_user_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "comments": {
+                    "description": "",
+                    "example": "sample comments",
+                    "type": "string"
+                },
+                "contributors": {
+                    "description": "",
+                    "example": "sample contributors",
+                    "type": "string"
+                },
+                "custom_status_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "description": {
+                    "description": "",
+                    "example": "sample description",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "",
+                    "example": "sample name",
+                    "type": "string"
+                },
+                "percentage_complete": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "priority": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "revised_duration": {
+                    "description": "",
+                    "example": "1.1",
+                    "format": "double",
+                    "type": "number"
+                },
+                "revised_duration_hour": {
+                    "description": "",
+                    "example": "1.1",
+                    "format": "double",
+                    "type": "number"
+                },
+                "revised_end_date": {
+                    "description": "",
+                    "format": "date",
+                    "type": "string"
+                },
+                "revised_start_date": {
+                    "description": "",
+                    "format": "date",
+                    "type": "string"
+                },
+                "status_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "task_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "task_type_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

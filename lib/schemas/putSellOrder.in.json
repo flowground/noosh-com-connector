@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "workgroup_id": {
+            "required": true,
+            "type": "string"
+        },
+        "project_id": {
+            "required": true,
+            "type": "string"
+        },
+        "order_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Java type: com.noosh.domain.nooshapi.persist.vo.OrderApprovalVO",
+            "properties": {
+                "action": {
+                    "description": "accept or reject",
+                    "example": "sample action",
+                    "type": "string"
+                },
+                "reject_reason": {
+                    "description": "",
+                    "example": "sample reject_reason",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

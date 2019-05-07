@@ -1,0 +1,126 @@
+{
+    "type": "object",
+    "properties": {
+        "workgroup_id": {
+            "required": true,
+            "type": "string"
+        },
+        "project_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Java type: com.noosh.domain.nooshapi.persist.vo.ProjectPersistVO",
+            "properties": {
+                "client_account": {
+                    "description": "",
+                    "example": "sample client_account",
+                    "type": "string"
+                },
+                "client_user_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "client_workgroup_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "comments": {
+                    "description": "",
+                    "example": "sample comments",
+                    "type": "string"
+                },
+                "completion_date": {
+                    "description": "",
+                    "format": "date",
+                    "type": "string"
+                },
+                "custom_fields": {
+                    "description": "",
+                    "items": {
+                        "description": "Java type: com.noosh.domain.nooshapi.persist.vo.CustomFieldPersistVO",
+                        "properties": {
+                            "date_value": {
+                                "description": "",
+                                "format": "date",
+                                "type": "string"
+                            },
+                            "number_value": {
+                                "description": ""
+                            },
+                            "param_name": {
+                                "description": "",
+                                "example": "sample param_name",
+                                "type": "string"
+                            },
+                            "string_value": {
+                                "description": "",
+                                "example": "sample string_value",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "deactivation_reason_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "is_active": {
+                    "description": "",
+                    "example": "false",
+                    "type": "boolean"
+                },
+                "is_hot": {
+                    "description": "",
+                    "example": "false",
+                    "type": "boolean"
+                },
+                "project_category_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "project_description": {
+                    "description": "",
+                    "example": "sample project_description",
+                    "type": "string"
+                },
+                "project_name": {
+                    "description": "",
+                    "example": "sample project_name",
+                    "type": "string"
+                },
+                "project_number": {
+                    "description": "",
+                    "example": "sample project_number",
+                    "type": "string"
+                },
+                "project_owner_user_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "project_status_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "project_status_id"
+            ],
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "properties": {
+        "workgroup_id": {
+            "required": true,
+            "type": "string"
+        },
+        "project_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Java type: com.noosh.domain.nooshapi.persist.po.TeamMemberPO",
+            "properties": {
+                "role_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "team_template_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "user_id": {
+                    "description": "",
+                    "example": "1",
+                    "format": "int64",
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

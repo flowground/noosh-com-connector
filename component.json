@@ -1,0 +1,1263 @@
+{
+    "title": "Noosh API application",
+    "description": "Full description of Noosh API",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/noosh.com/1.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "http://noosh.local:80/v1",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "username": {
+                "label": "Username (HTTP_BASIC)",
+                "viewClass": "TextFieldView"
+            },
+            "password": {
+                "label": "Password (HTTP_BASIC)",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "post_1_1_workgroups__workgroup_id__projects__project_id__teammembers": {
+            "main": "./lib/actions/post_1_1_workgroups__workgroup_id__projects__project_id__teammembers.js",
+            "title": "Invite a team member or all the members of team template for the specific project.",
+            "description": "Invite a team member or all the members of team template for the specific project.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "application/x-json-smile": "application/x-json-smile",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-yaml": "application/x-yaml",
+                        "text/x-yaml": "text/x-yaml",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_1_1_workgroups__workgroup_id__projects__project_id__teammembers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getWorkgroupList": {
+            "main": "./lib/actions/getWorkgroupList.js",
+            "title": "List the workgroups",
+            "description": "List the workgroups",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getWorkgroupList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getAutomaticInvitationList": {
+            "main": "./lib/actions/getAutomaticInvitationList.js",
+            "title": "List current user's automatic invitations info ",
+            "description": "List current user's automatic invitations info ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getAutomaticInvitationList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getBuyOrderListOfWorkgroup": {
+            "main": "./lib/actions/getBuyOrderListOfWorkgroup.js",
+            "title": "List the buy orders of workgroup",
+            "description": "List the buy orders of workgroup",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getBuyOrderListOfWorkgroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getBuyOrderOfWorkgroup": {
+            "main": "./lib/actions/getBuyOrderOfWorkgroup.js",
+            "title": "Get a specific buy order of workgroup",
+            "description": "Get a specific buy order of workgroup",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getBuyOrderOfWorkgroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getClientWorkgroupList": {
+            "main": "./lib/actions/getClientWorkgroupList.js",
+            "title": "List client workgroups",
+            "description": "List client workgroups",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getClientWorkgroupList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getProjectCategoryListOfClient": {
+            "main": "./lib/actions/getProjectCategoryListOfClient.js",
+            "title": "List the project categories of client side",
+            "description": "List the project categories of client side",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getProjectCategoryListOfClient.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getProjectHomeUserFieldListOfClient": {
+            "main": "./lib/actions/getProjectHomeUserFieldListOfClient.js",
+            "title": "List projec home user fields of client workgroup",
+            "description": "List projec home user fields of client workgroup",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getProjectHomeUserFieldListOfClient.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getProjectStatusOfClient": {
+            "main": "./lib/actions/getProjectStatusOfClient.js",
+            "title": "List the project status of client",
+            "description": "List the project status of client",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getProjectStatusOfClient.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getContactList": {
+            "main": "./lib/actions/getContactList.js",
+            "title": "List the contacts",
+            "description": "List the contacts",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getContactList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getWgTaskStatusListOfWorkgroup": {
+            "main": "./lib/actions/getWgTaskStatusListOfWorkgroup.js",
+            "title": "Get custom task status of workgroup level",
+            "description": "Get custom task status of workgroup level",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getWgTaskStatusListOfWorkgroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getCustomTaskTypesOfWg": {
+            "main": "./lib/actions/getCustomTaskTypesOfWg.js",
+            "title": "Get custom task types of workgroup level",
+            "description": "Get custom task types of workgroup level",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getCustomTaskTypesOfWg.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getDeactivationReasonList": {
+            "main": "./lib/actions/getDeactivationReasonList.js",
+            "title": "List all deactivation resons",
+            "description": "List all deactivation resons",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getDeactivationReasonList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "TaskPriorityList": {
+            "main": "./lib/actions/TaskPriorityList.js",
+            "title": "Get default task priority list",
+            "description": "Get default task priority list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/TaskPriorityList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getDefaultTaskStatusList": {
+            "main": "./lib/actions/getDefaultTaskStatusList.js",
+            "title": "Get default task status list",
+            "description": "Get default task status list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getDefaultTaskStatusList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getMyTimeCardList": {
+            "main": "./lib/actions/getMyTimeCardList.js",
+            "title": "List my time cards",
+            "description": "List my time cards",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getMyTimeCardList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getMyTimeCard": {
+            "main": "./lib/actions/getMyTimeCard.js",
+            "title": "Get a specific my time cards",
+            "description": "Get a specific my time cards",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getMyTimeCard.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getProductTypeListOfWorkgroup": {
+            "main": "./lib/actions/getProductTypeListOfWorkgroup.js",
+            "title": "Get product type of workgroup level",
+            "description": "Get product type of workgroup level",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getProductTypeListOfWorkgroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getProjectCategoryList": {
+            "main": "./lib/actions/getProjectCategoryList.js",
+            "title": "List the project categories",
+            "description": "List the project categories",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getProjectCategoryList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getProjectHomeUserFieldsList": {
+            "main": "./lib/actions/getProjectHomeUserFieldsList.js",
+            "title": "List projec home user fields",
+            "description": "List projec home user fields",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getProjectHomeUserFieldsList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getProjectStatus": {
+            "main": "./lib/actions/getProjectStatus.js",
+            "title": "List the project status",
+            "description": "List the project status",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getProjectStatus.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getProjectList": {
+            "main": "./lib/actions/getProjectList.js",
+            "title": "List the projects",
+            "description": "List the projects",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getProjectList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postProject": {
+            "main": "./lib/actions/postProject.js",
+            "title": "Create a Project",
+            "description": "Create a Project",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "application/x-json-smile": "application/x-json-smile",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-yaml": "application/x-yaml",
+                        "text/x-yaml": "text/x-yaml",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteProject": {
+            "main": "./lib/actions/deleteProject.js",
+            "title": "Archieve a specific Project",
+            "description": "Archieve a specific Project",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getProject": {
+            "main": "./lib/actions/getProject.js",
+            "title": "Get a specific Project",
+            "description": "Get a specific Project",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "putProject": {
+            "main": "./lib/actions/putProject.js",
+            "title": "Update a specific Project",
+            "description": "Update a specific Project",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "application/x-json-smile": "application/x-json-smile",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-yaml": "application/x-yaml",
+                        "text/x-yaml": "text/x-yaml",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/putProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getBuyOrderList": {
+            "main": "./lib/actions/getBuyOrderList.js",
+            "title": "List the buy orders",
+            "description": "List the buy orders",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getBuyOrderList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getBuyOrder": {
+            "main": "./lib/actions/getBuyOrder.js",
+            "title": "Get a specific buy order",
+            "description": "Get a specific buy order",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getBuyOrder.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getMemberRoles": {
+            "main": "./lib/actions/getMemberRoles.js",
+            "title": "List all the role options for the user",
+            "description": "List all the role options for the user",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getMemberRoles.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getQuoteList": {
+            "main": "./lib/actions/getQuoteList.js",
+            "title": "List the quotes",
+            "description": "List the quotes",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getQuoteList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getQuote": {
+            "main": "./lib/actions/getQuote.js",
+            "title": "Get a specific quote of project",
+            "description": "Get a specific quote of project",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getQuote.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "putQuote": {
+            "main": "./lib/actions/putQuote.js",
+            "title": "Accept / Reject a Quote",
+            "description": "Accept / Reject a Quote",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "application/x-json-smile": "application/x-json-smile",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-yaml": "application/x-yaml",
+                        "text/x-yaml": "text/x-yaml",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/putQuote.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRfqList": {
+            "main": "./lib/actions/getRfqList.js",
+            "title": "List the rfqs",
+            "description": "List the rfqs",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRfqList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRfq": {
+            "main": "./lib/actions/getRfq.js",
+            "title": "Get a specific Rfq",
+            "description": "Get a specific Rfq",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRfq.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSellOrderList": {
+            "main": "./lib/actions/getSellOrderList.js",
+            "title": "List the sell orders",
+            "description": "List the sell orders",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSellOrderList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSellOrder": {
+            "main": "./lib/actions/getSellOrder.js",
+            "title": "Get a specific sell order",
+            "description": "Get a specific sell order",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSellOrder.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "putSellOrder": {
+            "main": "./lib/actions/putSellOrder.js",
+            "title": "Accept or reject a specific sell change order",
+            "description": "Accept or reject a specific sell change order",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "application/x-json-smile": "application/x-json-smile",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-yaml": "application/x-yaml",
+                        "text/x-yaml": "text/x-yaml",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/putSellOrder.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getShipmentList": {
+            "main": "./lib/actions/getShipmentList.js",
+            "title": "List shipments of project",
+            "description": "List shipments of project",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getShipmentList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postShipment": {
+            "main": "./lib/actions/postShipment.js",
+            "title": "Create a shipment",
+            "description": "Create a shipment",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "application/x-json-smile": "application/x-json-smile",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-yaml": "application/x-yaml",
+                        "text/x-yaml": "text/x-yaml",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postShipment.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getShipment": {
+            "main": "./lib/actions/getShipment.js",
+            "title": "Get a specific shipment.",
+            "description": "Get a specific shipment.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getShipment.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "putShipmentLocation": {
+            "main": "./lib/actions/putShipmentLocation.js",
+            "title": "Update a specific shipment location",
+            "description": "Update a specific shipment location",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "application/x-json-smile": "application/x-json-smile",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-yaml": "application/x-yaml",
+                        "text/x-yaml": "text/x-yaml",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/putShipmentLocation.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSpecList": {
+            "main": "./lib/actions/getSpecList.js",
+            "title": "List specs of project Level",
+            "description": "List specs of project Level",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSpecList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postSpec": {
+            "main": "./lib/actions/postSpec.js",
+            "title": "Create a Spec",
+            "description": "Create a Spec",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "application/x-json-smile": "application/x-json-smile",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-yaml": "application/x-yaml",
+                        "text/x-yaml": "text/x-yaml",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postSpec.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSpec": {
+            "main": "./lib/actions/getSpec.js",
+            "title": "List a specific spec of project Level",
+            "description": "List a specific spec of project Level",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSpec.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getTaskListOfProject": {
+            "main": "./lib/actions/getTaskListOfProject.js",
+            "title": "Get task list of project level",
+            "description": "Get task list of project level",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTaskListOfProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postTaskForProject": {
+            "main": "./lib/actions/postTaskForProject.js",
+            "title": "Create a new task",
+            "description": "Create a new task",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "application/x-json-smile": "application/x-json-smile",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-yaml": "application/x-yaml",
+                        "text/x-yaml": "text/x-yaml",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postTaskForProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getTaskOfProject": {
+            "main": "./lib/actions/getTaskOfProject.js",
+            "title": "Get a sepcific task of project level",
+            "description": "Get a sepcific task of project level",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTaskOfProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getTeamMemberListOfProject": {
+            "main": "./lib/actions/getTeamMemberListOfProject.js",
+            "title": "List team member of project.",
+            "description": "List team member of project.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTeamMemberListOfProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_v1_workgroups__workgroup_id__projects__project_id__teammembers": {
+            "main": "./lib/actions/post_v1_workgroups__workgroup_id__projects__project_id__teammembers.js",
+            "title": "Deprecated, please use 1.1 Version",
+            "description": "Deprecated, please use 1.1 Version",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/json": "application/json",
+                        "application/x-json-smile": "application/x-json-smile",
+                        "application/xml": "application/xml",
+                        "text/xml": "text/xml",
+                        "application/x-yaml": "application/x-yaml",
+                        "text/x-yaml": "text/x-yaml",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_v1_workgroups__workgroup_id__projects__project_id__teammembers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteTeamMemberOfProject": {
+            "main": "./lib/actions/deleteTeamMemberOfProject.js",
+            "title": "Delete a team member for the specific project.",
+            "description": "Delete a team member for the specific project.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteTeamMemberOfProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getReceivedTimeCardList": {
+            "main": "./lib/actions/getReceivedTimeCardList.js",
+            "title": "List received time cards",
+            "description": "List received time cards",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getReceivedTimeCardList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getReceivedTimeCard": {
+            "main": "./lib/actions/getReceivedTimeCard.js",
+            "title": "List a specific received time cards",
+            "description": "List a specific received time cards",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getReceivedTimeCard.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSellOrderListOfWorkgroup": {
+            "main": "./lib/actions/getSellOrderListOfWorkgroup.js",
+            "title": "List the sell orders of workgrop",
+            "description": "List the sell orders of workgrop",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSellOrderListOfWorkgroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSellOrderOfWorkgroup": {
+            "main": "./lib/actions/getSellOrderOfWorkgroup.js",
+            "title": "Get a specific sell order",
+            "description": "Get a specific sell order",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSellOrderOfWorkgroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSpecTemplateList": {
+            "main": "./lib/actions/getSpecTemplateList.js",
+            "title": "List Spec Templates of Workgroup Level ",
+            "description": "List Spec Templates of Workgroup Level ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSpecTemplateList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSpecTemplate": {
+            "main": "./lib/actions/getSpecTemplate.js",
+            "title": "Get a specific Spec Template",
+            "description": "Get a specific Spec Template",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSpecTemplate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSpecTypeFields": {
+            "main": "./lib/actions/getSpecTypeFields.js",
+            "title": "Get Spec Type Fields",
+            "description": "Get Spec Type Fields",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSpecTypeFields.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getTaskTypesOfWorkgroup": {
+            "main": "./lib/actions/getTaskTypesOfWorkgroup.js",
+            "title": "Get task types of workgroup level",
+            "description": "Get task types of workgroup level",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTaskTypesOfWorkgroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getTaskListOfWorkgroup": {
+            "main": "./lib/actions/getTaskListOfWorkgroup.js",
+            "title": "Get task list of workgroup level",
+            "description": "Get task list of workgroup level",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTaskListOfWorkgroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getTaskOfWorkgroup": {
+            "main": "./lib/actions/getTaskOfWorkgroup.js",
+            "title": "Get a sepcific task of workgroup level",
+            "description": "Get a sepcific task of workgroup level",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTaskOfWorkgroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getTeamTemplateList": {
+            "main": "./lib/actions/getTeamTemplateList.js",
+            "title": "List current user's team templates info ",
+            "description": "List current user's team templates info ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTeamTemplateList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getTeamTemplateDetail": {
+            "main": "./lib/actions/getTeamTemplateDetail.js",
+            "title": "Get current user's team template detal info ",
+            "description": "Get current user's team template detal info ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTeamTemplateDetail.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getWorkgroupMemberList": {
+            "main": "./lib/actions/getWorkgroupMemberList.js",
+            "title": "List the workgroup members",
+            "description": "List the workgroup members",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getWorkgroupMemberList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}
